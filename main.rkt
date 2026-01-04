@@ -377,7 +377,7 @@
   (glfwExtensionSupported             ((extension : _string/utf-8) -> _int))
   (glfwGetProcAddress                 ((procname : _string/utf-8) -> GLFWglproc))
   (glfwVulkanSupported                (-> _int));
-  (glfwGetRequiredInstanceExtensions  ((count : (_ptr o _uint32)) -> (_ptr o _string/utf-8)))
+  (glfwGetRequiredInstanceExtensions  ((count : (_ptr o _uint32)) -> (_list o _string/utf-8 count)))
 
   ;; Not tested. Vulkan structs are unknown. May not match the implementation.
   (glfwGetInstanceProcAddress         ((instance : _pointer) (procname : _string/utf-8) -> GLFWvkproc))
